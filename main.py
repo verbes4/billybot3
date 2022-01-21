@@ -58,8 +58,8 @@ async def say(ctx, *wordsToSay): # puts whatever text the user says into a varia
     str = convertTuple(wordsToSay)
     await ctx.send(str) # sends the text in the variable
 
-@bot.command() # dm people, put their id then the message, idk what the code does i took it from daniel
-@commands.is_owner() # checks if the person running it is the owner (me)
+@bot.command() # dm people, @ them then put the message, idk what the code does i took it from daniel
+#@commands.is_owner() # checks if the person running it is the owner
 async def dm(ctx, member: discord.Member, *,  msg=None):
         await ctx.reply(
             f"I have sent that message to: {member.mention}", delete_after=3.0)
@@ -135,6 +135,6 @@ async def showerthought(ctx):
     shwrthought = nekos.why()
     await ctx.send(shwrthought)
 
-with open('token.txt') as f:
-    token = f.read()
+with open('token.txt') as f: # opens token.txt
+    token = f.read() # stores whatevers in it into the variable `token`
 bot.run(token) # token
