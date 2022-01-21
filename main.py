@@ -16,16 +16,7 @@ bot = commands.Bot(command_prefix="$", help_command=None, intents=intents)
 async def on_ready():
     print(f'We have logged in as {bot.user}') # when the bot is logged in, show it in console
     print(f'Discord version: {discord.__version__}') # print the discord version too
-    await bot.change_presence(activity=discord.Game(name="$help1 | Made by verbes4#8839")) # and then set the bots activity
-
-# skidded code to convert a tuple into a string
-def convertTuple(tup):
-        # initialize an empty string
-    str = ''
-    for item in tup:
-        str = str + item
-        str = str + " "
-    return str
+    await bot.change_presence(activity=discord.Game(name="$help | Made by verbes4#8839")) # and then set the bots activity
 
 # load cogs
 bot.load_extension('cogs.nsfw')
@@ -54,9 +45,8 @@ async def token(ctx):
     await ctx.send("Here is my Token: <https://www.youtube.com/watch?v=dQw4w9WgXcQ>") # sends link to rickroll with <> to prevent the embed
 
 @bot.command() # make the Bot say stuff
-async def say(ctx, *wordsToSay): # puts whatever text the user says into a variable
-    str = convertTuple(wordsToSay)
-    await ctx.send(str) # sends the text in the variable
+async def say(ctx, *, wordsToSay): # puts whatever text the user says into a variable
+    await ctx.send(wordsToSay) # sends the text in the variable
 
 @bot.command() # dm people, @ them then put the message, idk what the code does i took it from daniel
 #@commands.is_owner() # checks if the person running it is the owner
