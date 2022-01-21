@@ -10,7 +10,7 @@ logging.basicConfig(level=logging.INFO) # logging stuff
 # important stuff
 intents = discord.Intents.default()
 #bot = discord.Client() <-- dont uncomment lol
-bot = commands.Bot(command_prefix="$", help_command=None, intents=intents)
+bot = commands.Bot(command_prefix="$", help_command=None, intents=intents) # sets the prefix for commands
 
 @bot.event # checks if bot is logged in
 async def on_ready():

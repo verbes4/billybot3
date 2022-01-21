@@ -31,7 +31,7 @@ class miscCog(commands.Cog):
         await ctx.send(wordsToSay) # sends the text in the variable
 
     @commands.command() # dm people, @ them then put the message, idk what the code does i took it from daniel
-    #@commands.is_owner() # checks if the person running it is the owner
+    #@commands.is_owner() # checks if the person running it is the owner, uncomment to use
     async def dm(self, ctx, member: discord.Member, *,  msg=None):
             await ctx.reply(
                 f"I have sent that message to: {member.mention}", delete_after=3.0)

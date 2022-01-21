@@ -1,3 +1,5 @@
+# THIS NEEDS MORE COMMENTS
+
 # importing libs
 import discord
 from discord.ext import commands
