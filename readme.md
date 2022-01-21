@@ -11,5 +11,6 @@ This assumes you have Python3 + Pip set up on the PATH.
 4) Create a text file named "token.txt" in the root and put your Bot's token in there
 8) In your terminal type `main.py`
 
+Pull requests, even if they just add comments to the code, are EXTREMELY appreciated :)
 
 If you need help, message me on Discord: `verbes4#8839`
