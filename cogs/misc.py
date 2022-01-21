@@ -39,12 +39,6 @@ class miscCog(commands.Cog):
                 msg)
             await ctx.message.delete()
 
-    @commands.command() # get avatar of user, again idk what the code does i took it from daniel
-    async def avatar(self, ctx, member: discord.Member = None):
-        if not member:
-            member = ctx.author
-            await ctx.send(member.avatar_url)
-
     @commands.command() # magic 8-ball command (very optimzied lol)
     async def eightball(self, ctx, eightballquestion):
         randballnum = random.randint(1, 20) # picks random number between 1 and 20, then sends an answer that is connected to the number through else ifs
