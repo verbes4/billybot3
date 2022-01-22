@@ -1,6 +1,7 @@
 # importing libs
 import discord
 from discord.ext import commands
+import random
 
 # initializing cog
 class mathCog(commands.Cog):

@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import nekos
+import random
 
 class miscCog(commands.Cog):
     def __init__(self, bot):
