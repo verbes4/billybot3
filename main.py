@@ -31,6 +31,11 @@ async def avatar(ctx, member: discord.Member = None):
       member = ctx.author
      await ctx.send(member.avatar_url)
 
+@bot.command()
+async def ping(ctx):
+    thePing = round(bot.latency * 1000)
+    await ctx.send(thePing)
+
 with open('token.txt') as f: # opens token.txt
     token = f.read() # stores whatevers in it into the variable `token`
 bot.run(token) # token

@@ -73,6 +73,7 @@ class helpCog(commands.Cog):
         embed.add_field(name="$eightball question", value="Ask Billy a question.", inline=False)
         embed.add_field(name="$fact", value="Billy will send a random fact.", inline=False)
         embed.add_field(name="$mcserver <mc server ip>", value="Billy will give info about a Minecraft server.", inline=False)
+        embed.add_field(name="$ping", value="Billy will give you his ping.", inline=False)
         embed.add_field(name="$owoify <text here>", value="Billy will owoify your text.", inline=False)
         embed.add_field(name="$say <text here>", value="Billy will say your text.", inline=False)
         embed.add_field(name="$showerthought", value="Like the SubReddit.", inline=False)        
