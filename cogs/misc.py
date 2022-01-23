@@ -3,9 +3,6 @@ from discord.ext import commands
 import nekos
 import random
 import minestat
-import logging
-
-logging.basicConfig(level=logging.INFO) # logging stuff
 
 class miscCog(commands.Cog):
     def __init__(self, bot):
@@ -111,6 +108,9 @@ class miscCog(commands.Cog):
         ms = minestat.MineStat(serverip, 25565)
         if ms.online:
             await ctx.send('Server is online. %s. %s out of %s players.' % (ms.version, ms.current_players, ms.max_players))
+            await ctx.send("_ _")
+            await ctx.send('MOTD: %s' % ms.stripped_motd)
+            await ctx.send("_ _")
             await ctx.send('Latency: %sms' % ms.latency)
         else:
             await ctx.send('Server is offline!')
