@@ -2,6 +2,10 @@ import discord
 from discord.ext import commands
 import nekos
 import random
+import minestat
+import logging
+
+logging.basicConfig(level=logging.INFO) # logging stuff
 
 class miscCog(commands.Cog):
     def __init__(self, bot):
@@ -92,15 +96,24 @@ class miscCog(commands.Cog):
         await ctx.send(fact)
 
     @commands.command() # owoify text
-    async def owoify(self, ctx, *wantowoed): # stores the users text in the wantowoed variable
-        str = convertTuple(wantowoed)
-        userowo = nekos.owoify(str)
+    async def owoify(self, ctx, *, wantowoed): # stores the users text in the wantowoed variable
+        userowo = nekos.owoify(wantowoed)
         await ctx.send(userowo)
 
     @commands.command() # reddit.com/r/showerthoughts type of thing
     async def showerthought(self, ctx):
         shwrthought = nekos.why()
         await ctx.send(shwrthought)
+
+    @commands.command()
+    async def mcserver(self, ctx, *, serverip):
+        await ctx.send("One moment please...", delete_after=3.0)
+        ms = minestat.MineStat(serverip, 25565)
+        if ms.online:
+            await ctx.send('Server is online. %s. %s out of %s players.' % (ms.version, ms.current_players, ms.max_players))
+            await ctx.send('Latency: %sms' % ms.latency)
+        else:
+            await ctx.send('Server is offline!')
 
 def setup(bot: commands.Bot):
     bot.add_cog(miscCog(bot))

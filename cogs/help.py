@@ -72,8 +72,9 @@ class helpCog(commands.Cog):
         embed = discord.Embed(title="Misc Commands", color=0xff0000) # setting up embed
         embed.add_field(name="$eightball question", value="Ask Billy a question.", inline=False)
         embed.add_field(name="$fact", value="Billy will send a random fact.", inline=False)
-        embed.add_field(name="$owoify text here", value="Billy will owoify your text.", inline=False)
-        embed.add_field(name="$say text here", value="Billy will say your text.", inline=False)
+        embed.add_field(name="$mcserver <mc server ip>", value="Billy will give info about a Minecraft server.", inline=False)
+        embed.add_field(name="$owoify <text here>", value="Billy will owoify your text.", inline=False)
+        embed.add_field(name="$say <text here>", value="Billy will say your text.", inline=False)
         embed.add_field(name="$showerthought", value="Like the SubReddit.", inline=False)        
         embed.add_field(name="$token", value="Billy will give you his token.", inline=False)
         embed.set_footer(text="Bot by verbes4#8839 <3")
