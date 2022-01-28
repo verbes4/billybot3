@@ -117,8 +117,7 @@ class miscCog(commands.Cog):
 
     @commands.command() # mentions the member with a link to "you should kys now!" then deletes the authors message
     async def kys(self, ctx, member: discord.Member, *,  msg=None):
-            await ctx.send(f"{member.mention}")
-            await ctx.send("https://i.kym-cdn.com/entries/icons/original/000/038/646/E_HXiZqX0Ac2UyZ.jpg")
+            await ctx.send(f"{member.mention} https://i.kym-cdn.com/entries/icons/original/000/038/646/E_HXiZqX0Ac2UyZ.jpg")
             await ctx.message.delete()
 
 def setup(bot: commands.Bot):
